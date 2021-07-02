@@ -1,0 +1,29 @@
+name: Self check
+
+on: [push]
+
+jobs:
+  check:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-18.04, macos-latest, windows-latest]
+        clojure-lsp-version: [2021.07.01-19.49.02]
+    steps:
+      - name: Setup clojure-lsp
+        id: setup-clojure-lsp
+        uses: clojure-lsp/setup-clojure-lsp@main
+        with:
+          clojure-lsp-version: ${{ matrix.clojure-lsp-version }}
+
+      - name: Check if clojure-lsp runs fine
+        run: clojure-lsp --version
+
+      - name: Setup clojure-lsp from cache
+        id: setup-clojure-lsp-2
+        uses: clojure-lsp/setup-clojure-lsp@main
+        with:
+          clojure-lsp-version: ${{ matrix.clojure-lsp-version }}
+
+      - name: Check if clojure-lsp runs fine from cache
+        run: clojure-lsp --version
