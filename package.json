@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turtlequeue/setup-clojure-lsp.git"
+    "url": "git+https://github.com/clojure-lsp/setup-clojure-lsp.git"
   },
   "keywords": [
     "actions",
@@ -23,7 +23,7 @@
     "github",
     "setup"
   ],
-  "author": "nha",
+  "author": "ericdallo",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
