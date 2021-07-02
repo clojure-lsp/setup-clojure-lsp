@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup clojure-lsp
-        uses: turtlequeue/setup-clojure-lsp@v1.3.0
+        uses: turtlequeue/setup-clojure-lsp@v1
         with:
-          clojure-lsp-version: 0.3.2
+          clojure-lsp-version: 2021.07.01-19.49.02
 
       - name: Check clojure-lsp version
         run: clojure-lsp --version
