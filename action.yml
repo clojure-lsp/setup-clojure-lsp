@@ -1,5 +1,5 @@
-name: 'Setup clojure-lsp - Clojure tool for refactoring and cleaning your code.'
-description: 'Setup your runner with clojure-lsp'
+name: 'Setup clojure-lsp'
+description: 'Setup your runner with clojure-lsp, a Clojure tool for refactoring and cleaning your code.'
 author: 'ericdallo'
 branding:
   icon: 'code'
