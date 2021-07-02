@@ -1,0 +1,16 @@
+name: Main dev test
+
+on: [push]
+
+jobs:
+  simple:
+    runs-on: ubuntu-latest
+    # runs-on: windows-latest
+    steps:
+      - name: Setup clojure-lsp
+        uses: clojure-lsp/setup-clojure-lsp@test-action
+        with:
+          clojure-lsp-version: 2021.07.01-19.49.02
+
+      - name: Check clojure-lsp version
+        run: clojure-lsp --version
