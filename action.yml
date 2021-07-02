@@ -1,0 +1,13 @@
+name: 'Setup clojure-lsp - Clojure tool for refactoring and cleaning your code.'
+description: 'Setup your runner with clojure-lsp'
+author: 'ericdallo'
+branding:
+  icon: 'bold'
+  color: 'green'
+inputs:
+  clojure-lsp-version:
+    description: 'The clojure-lsp/clojure-lsp version to make available on the path. Only exact version allowed.'
+    required: true
+  runs:
+  using: 'node12'
+  main: 'dist/index.js'

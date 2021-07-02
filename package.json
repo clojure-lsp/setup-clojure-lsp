@@ -1,0 +1,46 @@
+{
+  "name": "setup-clojure-lsp",
+  "version": "1.0.0",
+  "private": false,
+  "description": "setup clojure-lsp action",
+  "main": "src/setup-clojure-lsp.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --license LICENCE",
+    "all": "npm run build && npm run format && npm run lint && npm run package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turtlequeue/setup-clojure-lsp.git"
+  },
+  "keywords": [
+    "actions",
+    "clojure",
+    "clojure-lsp",
+    "github",
+    "setup"
+  ],
+  "author": "nha",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/exec": "^1.0.4",
+    "@actions/tool-cache": "^1.6.1",
+    "axios": "^0.21.1",
+    "typescript-formatter": "^7.2.2",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.25",
+    "@types/semver": "^6.2.1",
+    "@types/uuid": "^8.3.0",
+    "@vercel/ncc": "^0.24.1",
+    "eslint": "^7.10.0",
+    "eslint-plugin-github": "^4.1.1",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  }
+}
