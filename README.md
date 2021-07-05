@@ -14,6 +14,7 @@ jobs:
   simple:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@v1
         with:
@@ -21,4 +22,30 @@ jobs:
 
       - name: Check clojure-lsp version
         run: clojure-lsp --version
+```
+
+Remember to install the build tool for your project, this is required for clojure-lsp scan the project classpath correctly, for example cleaning the namespaces on a `deps.edn` project:
+
+```yaml
+name: Check if namespaces are clean
+
+on: [push]
+
+jobs:
+  simple:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Clojure
+        uses: DeLaGuardo/setup-clojure@master
+        with:
+          cli: '1.10.3.814'
+
+      - name: Setup clojure-lsp
+        uses: clojure-lsp/setup-clojure-lsp@v1
+        with:
+          clojure-lsp-version: 2021.07.05-15.12.14
+
+      - name: check if clean-ns return no diffs
+        run: clojure-lsp clean-ns --dry
 ```
