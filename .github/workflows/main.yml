@@ -10,7 +10,7 @@ jobs:
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@test-action
         with:
-          clojure-lsp-version: 2021.12.01-12.28.16
+          clojure-lsp-version: 2021.12.20-00.36.56
 
       - name: Check clojure-lsp version
         run: clojure-lsp --version
