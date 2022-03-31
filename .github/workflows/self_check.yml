@@ -13,7 +13,7 @@ jobs:
         id: setup-clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@main
         with:
-          clojure-lsp-version: 2022.03.31-14.21.14
+          clojure-lsp-version: 2022.03.31-20.00.20
 
       - name: Check if clojure-lsp runs fine
         run: clojure-lsp --version
@@ -22,7 +22,7 @@ jobs:
         id: setup-clojure-lsp-2
         uses: clojure-lsp/setup-clojure-lsp@main
         with:
-          clojure-lsp-version: 2022.03.31-14.21.14
+          clojure-lsp-version: 2022.03.31-20.00.20
 
       - name: Check if clojure-lsp runs fine from cache
         run: clojure-lsp --version
