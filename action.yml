@@ -1,13 +1,13 @@
 name: 'Setup clojure-lsp'
-description: 'Setup your runner with clojure-lsp, a Clojure tool for refactoring and cleaning your code.'
+description: 'Setup your runner with clojure-lsp, a Clojure tool for refactoring, formattting and cleaning your code.'
 author: 'ericdallo'
 branding:
   icon: 'code'
   color: 'blue'
 inputs:
   clojure-lsp-version:
-    description: 'The clojure-lsp/clojure-lsp version to make available on the path. Only exact version allowed.'
+    description: 'The clojure-lsp version to make available on the path. Only exact version allowed.'
     required: true
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'dist/index.js'
