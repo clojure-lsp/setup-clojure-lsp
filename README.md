@@ -18,7 +18,7 @@ jobs:
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@v1
         with:
-          clojure-lsp-version: 2025.06.13-20.45.44
+          clojure-lsp-version: 2025.08.15-15.37.37
 
       - name: Check clojure-lsp version
         run: clojure-lsp --version
@@ -44,7 +44,7 @@ jobs:
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@v1
         with:
-          clojure-lsp-version: 2025.06.13-20.45.44
+          clojure-lsp-version: 2025.08.15-15.37.37
 
       - name: check if clean-ns return no diffs
         run: clojure-lsp clean-ns --dry
