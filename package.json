@@ -9,7 +9,7 @@
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "ncc build --license LICENCE",
+    "package": "esbuild src/setup-clojure-lsp.ts --bundle --platform=node --target=node24 --outfile=dist/index.js --legal-comments=linked --footer:js='// LICENCE file contains third-party licenses'",
     "all": "npm run build && npm run format && npm run lint && npm run package"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "@actions/core": "^3.0.0",
     "@actions/exec": "^3.0.0",
+    "@actions/io": "^3.0.0",
     "@actions/tool-cache": "^4.0.0",
     "axios": "^1.15.0",
     "typescript-formatter": "^7.2.2",
@@ -36,8 +37,7 @@
   "devDependencies": {
     "@types/node": "^25.5.2",
     "@types/semver": "^7.7.1",
-    "@types/uuid": "^11.0.0",
-    "@vercel/ncc": "^0.38.4",
+    "esbuild": "^0.28.0",
     "eslint": "^10.2.0",
     "eslint-plugin-github": "^6.0.0",
     "prettier": "^3.8.1",
