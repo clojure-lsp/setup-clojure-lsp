@@ -14,7 +14,7 @@ jobs:
   simple:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@v1
         with:
@@ -35,11 +35,11 @@ jobs:
   simple:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: Install Clojure
-        uses: DeLaGuardo/setup-clojure@master
+        uses: DeLaGuardo/setup-clojure@main
         with:
-          cli: '1.10.3.814'
+          cli: '1.12.4.1618'
 
       - name: Setup clojure-lsp
         uses: clojure-lsp/setup-clojure-lsp@v1
